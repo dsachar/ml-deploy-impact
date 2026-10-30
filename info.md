@@ -18,15 +18,38 @@ Traditional AutoML and model selection heuristics exemplify Red AI practices: th
 
 ---
 
-## 2. Technical Architecture
+## 2. Technical Architecture & System Boundaries
 
-- **Format**: Zero-build static web application (pure HTML5, CSS3, and ES6+ JavaScript).
-- **Standards**: Aligned with Green AI principles, ISO/IEC 21031:2024, and the Green Software Foundation (GSF) *Software Carbon Intensity (SCI) for AI* specification (`Green-Software-Foundation/sci-ai`).
+- **Format**: Zero-build static web application (pure HTML5, CSS3, and ES6+ JavaScript) and a standalone dependency-free calculation engine (`simulation-core.js`).
+- **Framing**: SCI-for-AI-informed framing aligned with Green AI principles, ISO/IEC 21031:2024, and the Green Software Foundation (GSF) *Software Carbon Intensity (SCI) for AI* specification (`Green-Software-Foundation/sci-ai`).
+- **Educational Simulator Notice**: This tool produces illustrative, configurable estimates to demonstrate lifecycle trade-offs. It is **not** an authoritative SCI measurement agent, compliance audit tool, or procurement certification platform. Defaults are educational assumptions intended to be calibrated against real telemetry for real deployments.
 - **Files**:
-  - `index.html`: UI structure organized into 4 workflow tabs (*01. Models*, *02. Configuration*, *03. Assessment*, *04. Which Model to Deploy*) and a right-aligned unnumbered reference tab (*Methodology*).
+  - `index.html`: UI structure organized into 4 workflow tabs (*01. Models*, *02. Configuration*, *03. Assessment*, *04. Which Model to Deploy*) and an unnumbered reference tab (*Methodology*).
   - `styles.css`: Custom "field-notebook" theme with grid paper styling, side-by-side paper bill slips, carbon badges, and full-width panels.
-  - `app.js`: State management, O(1) memory closed-form simulation engine, GSF SCI carbon accounting, bounded SVG chart renderers, and requestAnimationFrame debouncing.
-- **Dependencies**: Google Fonts (`Space Grotesk` and `IBM Plex Mono`). Falls back to system monospace and sans-serif fonts offline.
+  - `simulation-core.js`: Dependency-free closed-form O(1) simulation calculation engine shared by browser and offline test runner.
+  - `app.js`: State management, DOM controllers, and bounded SVG chart renderers.
+  - `tests/simulation-core.test.js`: Offline unit test suite for calculation engine.
+  - `package.json`: Node test runner script (`npm test`).
+- **Dependencies**: None. Optional Google Fonts (`Space Grotesk` and `IBM Plex Mono`) with graceful fallback to system monospace and sans-serif fonts offline.
+
+### 2.1 Included Scope
+- Candidate model comparison across initial training runtime, offline benchmark evaluation, continuous operational inference, data drift degradation, and retraining cycles.
+- Combined operational electricity emissions ($O$) and embodied server manufacturing emissions ($M$).
+- Quality-Adjusted Consumer SCI — shorthand **Consumer SCI (QA)** — penalizing operational errors under drift.
+
+### 2.2 Explicit Exclusions & Simplifications
+- **Network transmission**: Client-server network bandwidth, API gateways, and WAN transfer energy are excluded.
+- **Persistent storage**: Feature stores, dataset replication, historical checkpoints, and artifact storage are excluded.
+- **GPU dynamic curves**: Uses average active instance power draw (Watts) for CPU workloads rather than dynamic frequency scaling (DVFS) or GPU thermal throttling profiles.
+- **Client / edge devices**: Scopes server-side datacenter infrastructure only.
+- **Stochastic drift detection**: Assumes a deterministic continuous drift rate per prediction rather than modeling statistical detector delay or false-alarm retrain triggers.
+
+### 2.3 Telemetry Calibration for Production
+Default values for runtime, power, drift, and grid carbon factors are editable educational assumptions. To guide real-world deployments:
+1. **Runtimes**: Profile true inference latency ($t_{\text{inf}}$) and training time ($t_{\text{train}}$) on production hardware.
+2. **Electrical Power**: Measure host server wattage ($P_{\text{machine}}$) under load via IPMI, Intel RAPL, or datacenter PDU meters.
+3. **Drift Degradation**: Measure empirical accuracy loss ($\text{robustness}$) across historical streaming validation slices.
+4. **Grid Carbon Intensity**: Input location-specific marginal grid carbon intensity ($I$) for your cloud region (e.g. from IEA, Ember, or Electricity Maps).
 
 ---
 

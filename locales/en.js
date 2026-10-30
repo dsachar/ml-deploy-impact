@@ -4,9 +4,9 @@ window.LOCALES.en = {
   header: {
     eyebrow: "ML Deploy Impact · AutoML Model Selection · Lifecycle Assessment (LCA)",
     title: "ML Deploy Impact: Lifecycle Assessment for Machine Learning Models",
-    lede: "In the paradigm of <strong>Green AI</strong>, machine learning architectures must be evaluated on ecological efficiency and real-world carbon cost, rather than static benchmark accuracy alone. While AutoML and model selection heuristics conventionally deploy whichever candidate scores highest on offline test benchmarks (following <em>Red AI</em> heuristics), in live production <strong>different models respond differently to data drift</strong>: brittle architectures degrade quickly and trigger frequent, energy-heavy retraining, whereas robust models maintain stability. This interactive tool demonstrates <strong>lifecycle assessment for machine learning models</strong> across months of operational serving, using <a href=\"https://grnsft.org/sci\" target=\"_blank\" rel=\"noopener noreferrer\">Software Carbon Intensity for AI (SCI for AI)</a> standardized by the <a href=\"https://greensoftware.foundation/\" target=\"_blank\" rel=\"noopener noreferrer\">Green Software Foundation (GSF)</a> and <a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> to quantify total operational and embodied emissions—while applying <strong>Consumer SCI (QA)</strong> to directly adapt for and penalize model mistakes.",
+    lede: "In the paradigm of <strong>Green AI</strong>, machine learning architectures must be evaluated on ecological efficiency and real-world carbon cost, rather than static benchmark accuracy alone. While AutoML and model selection heuristics conventionally deploy whichever candidate scores highest on offline test benchmarks (following <em>Red AI</em> heuristics), in live production <strong>different models respond differently to data drift</strong>: brittle architectures degrade quickly and trigger frequent, energy-heavy retraining, whereas robust models maintain stability. This interactive educational simulator illustrates <strong>lifecycle assessment for machine learning models</strong> across months of operational serving, applying an <strong>SCI-for-AI-informed framing</strong> based on <a href=\"https://grnsft.org/sci\" target=\"_blank\" rel=\"noopener noreferrer\">Software Carbon Intensity for AI (SCI for AI)</a> and <a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> principles to quantify operational and embodied emissions—while applying <strong>Consumer SCI (QA)</strong> to directly penalize model mistakes under drift.",
     noticeTitle: "Disclaimer",
-    noticeText: "This independent tool is for educational and informational purposes to illustrate ML Lifecycle Assessment (LCA). Simulated compute, energy, and carbon metrics are indicative and customizable. This project is not affiliated with, endorsed by, or supported by any referenced organizations (such as GSF, Boavizta, or IEA)."
+    noticeText: "This educational simulator produces illustrative, configurable estimates—not telemetry-backed measurements, compliance results, or procurement guidance. Calibrate inputs with your own operational data. This project is not affiliated with, endorsed by, or supported by any referenced organizations (such as GSF, Boavizta, or IEA)."
   },
   nav: {
     models: "Models",
@@ -214,7 +214,7 @@ window.LOCALES.en = {
     hero: {
       eyebrow: "Technical Reference & Specifications",
       title: "Methodology & Mathematical Framework",
-      sub: "Formal closed-form equations, international standards compliance (ISO/IEC 21031:2024), and Quality-adjusted Software Carbon Intensity (SCI for AI) modeling for machine learning model selection under continuous distribution drift.",
+      sub: "Closed-form equations, SCI-for-AI-informed framing (ISO/IEC 21031:2024 principles), and Quality-adjusted Software Carbon Intensity (Consumer SCI QA) modeling for educational model-selection simulation under continuous distribution drift.",
       chipIso: "ISO/IEC 21031:2024 ↗",
       chipGsf: "GSF SCI for AI ↗",
       chipGreenAi: "Green AI Paradigm ↗",
@@ -231,7 +231,8 @@ window.LOCALES.en = {
       p6: "§6 Adapting for Mistakes",
       p7: "§7 Live Calculation Trace",
       p8: "§8 Hardware & Grids",
-      p9: "§9 References & Sources"
+      p9: "§9 References & Sources",
+      p10: "§10 Scope & Calibration"
     },
     part1: {
       title: "Part 1 · The AutoML Model Selection Blind Spot",
@@ -379,7 +380,7 @@ window.LOCALES.en = {
     },
     part9: {
       title: "Part 9 · Standards, Primary References & Literature",
-      tag: "Authoritative Sources",
+      tag: "Primary Specifications & Sources",
       sub: "This project's accounting boundaries, continuous drift formulations, and carbon intensity equations are derived from international standards, open scientific benchmarks, and peer-reviewed literature:",
       isoTitle: "ISO/IEC 21031:2024 Standard",
       isoBtn: "ISO Spec ↗",
@@ -405,6 +406,21 @@ window.LOCALES.en = {
       pattersonTitle: "Carbon Emissions & 4Ms",
       pattersonBtn: "arXiv ↗",
       pattersonDesc: "<b>Patterson et al. (2021) · Carbon Emissions and Large Neural Network Training.</b> Formalizes the 4Ms framework (Model, Machine, Mechanization PUE, and Map grid carbon intensity), validating our holistic combination of host compute power, datacenter PUE, and regional emissions."
+    },
+    part10: {
+      title: "Part 10 · System Boundaries, Exclusions & Calibration Guidance",
+      tag: "Simulation Boundaries",
+      sub: "To interpret simulator results accurately and translate them into real-world engineering environments, review the explicit modeling boundaries, simplifications, and calibration steps below:",
+      scopeTitle: "Included Scope",
+      scopeTag: "Modeled",
+      scopeList: "<li>Candidate model comparison across initial training and test evaluation.</li><li>Operational streaming inference traffic over months of deployment.</li><li>Continuous performance degradation driven by input data distribution drift.</li><li>Drift-triggered or scheduled retraining compute, energy, and carbon.</li><li>Operational electricity carbon (PUE scaled, regional grid intensity).</li><li>Embodied server manufacturing carbon amortized by runtime and utilization.</li><li>Consumer SCI (QA) functional unit penalizing inaccurate predictions.</li>",
+      exclTitle: "Explicit Exclusions",
+      exclTag: "Excluded",
+      exclList: "<li><b>Network transmission:</b> API gateway, ingress/egress bandwidth, and WAN hops.</li><li><b>Storage infrastructure:</b> Historical feature stores, datasets, and artifact registries.</li><li><b>GPU dynamic curves:</b> Assumes average active wattage profiles rather than dynamic DVFS/GPU thermals.</li><li><b>Client / edge devices:</b> Scopes server-side datacenter compute only.</li><li><b>Stochastic drift detection:</b> Models drift deterministically, abstracting away detector latency and false-alarm retrains.</li>",
+      calibTitle: "Telemetry Calibration",
+      calibTag: "For Production",
+      calibDesc: "Default values for model runtime, wattage, drift robustness, and grid intensity are <b>editable educational assumptions</b>. Before using these trade-offs to guide real-world deployment decisions:",
+      calibList: "<li>Profile inference latency and training runtime on target production hardware.</li><li>Measure real host server wattage under load (e.g. IPMI/RAPL or PDU power meters).</li><li>Log observed accuracy decay on historical validation drift splits.</li><li>Input location-specific marginal grid carbon intensity from local operators or Ember.</li>"
     }
   },
   footer: {

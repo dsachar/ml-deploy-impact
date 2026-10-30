@@ -21,8 +21,8 @@
     </div>
     <div class="eyebrow" data-i18n="header.eyebrow">ML Deploy Impact · AutoML Model Selection · Lifecycle Assessment (LCA)</div>
     <h1>ML Deploy Impact: Lifecycle Assessment for Machine Learning Models</h1>
-    <p class="lede" data-i18n-html="header.lede">In the paradigm of <strong>Green AI</strong>, machine learning architectures must be evaluated on ecological efficiency and real-world carbon cost, rather than static benchmark accuracy alone. While AutoML and model selection heuristics conventionally deploy whichever candidate scores highest on offline test benchmarks (following <em>Red AI</em> heuristics), in live production <strong>different models respond differently to data drift</strong>: brittle architectures degrade quickly and trigger frequent, energy-heavy retraining, whereas robust models maintain stability. This interactive tool demonstrates <strong>lifecycle assessment for machine learning models</strong> across months of operational serving, using <a href="https://grnsft.org/sci" target="_blank" rel="noopener noreferrer">Software Carbon Intensity for AI (SCI for AI)</a> standardized by the <a href="https://greensoftware.foundation/" target="_blank" rel="noopener noreferrer">Green Software Foundation (GSF)</a> and <a href="https://www.iso.org/standard/86612.html" target="_blank" rel="noopener noreferrer">ISO/IEC 21031:2024</a> to quantify total operational and embodied emissions—while applying <strong>Consumer SCI (QA)</strong> to directly adapt for and penalize model mistakes.</p>
-    <div class="notice"><b data-i18n="header.noticeTitle">Disclaimer</b> · <span data-i18n="header.noticeText">This independent tool is for educational and informational purposes to illustrate ML Lifecycle Assessment (LCA). Simulated compute, energy, and carbon metrics are indicative and customizable. This project is not affiliated with, endorsed by, or supported by any referenced organizations (such as GSF, Boavizta, or IEA).</span></div>
+    <p class="lede" data-i18n-html="header.lede">In the paradigm of <strong>Green AI</strong>, machine learning architectures must be evaluated on ecological efficiency and real-world carbon cost, rather than static benchmark accuracy alone. While AutoML and model selection heuristics conventionally deploy whichever candidate scores highest on offline test benchmarks (following <em>Red AI</em> heuristics), in live production <strong>different models respond differently to data drift</strong>: brittle architectures degrade quickly and trigger frequent, energy-heavy retraining, whereas robust models maintain stability. This interactive educational simulator illustrates <strong>lifecycle assessment for machine learning models</strong> across months of operational serving, applying an <strong>SCI-for-AI-informed framing</strong> based on <a href="https://grnsft.org/sci" target="_blank" rel="noopener noreferrer">Software Carbon Intensity for AI (SCI for AI)</a> and <a href="https://www.iso.org/standard/86612.html" target="_blank" rel="noopener noreferrer">ISO/IEC 21031:2024</a> principles to quantify operational and embodied emissions—while applying <strong>Consumer SCI (QA)</strong> to directly penalize model mistakes under drift.</p>
+    <div class="notice"><b data-i18n="header.noticeTitle">Disclaimer</b> · <span data-i18n="header.noticeText">This educational simulator produces illustrative, configurable estimates—not telemetry-backed measurements, compliance results, or procurement guidance. Calibrate inputs with your own operational data. This project is not affiliated with, endorsed by, or supported by any referenced organizations (such as GSF, Boavizta, or IEA).</span></div>
   </div>
 </header>
 
@@ -304,7 +304,7 @@
       <div class="method-hero">
         <div class="eyebrow" style="margin-bottom:4px;" data-i18n="method.hero.eyebrow">Technical Reference &amp; Specifications</div>
         <h2 data-i18n="method.hero.title">Methodology &amp; Mathematical Framework</h2>
-        <p class="sub" data-i18n="method.hero.sub">Formal closed-form equations, international standards compliance (ISO/IEC 21031:2024), and Quality-adjusted Software Carbon Intensity (SCI for AI) modeling for machine learning model selection under continuous distribution drift.</p>
+        <p class="sub" data-i18n="method.hero.sub">Closed-form equations, SCI-for-AI-informed framing (ISO/IEC 21031:2024 principles), and Quality-adjusted Software Carbon Intensity (Consumer SCI QA) modeling for educational model-selection simulation under continuous distribution drift.</p>
         <div class="method-standards">
           <a href="https://www.iso.org/standard/86612.html" target="_blank" rel="noopener noreferrer" class="method-chip" title="ISO/IEC 21031:2024 Software carbon intensity (SCI) specification" data-i18n="method.hero.chipIso">ISO/IEC 21031:2024 ↗</a>
           <a href="https://github.com/Green-Software-Foundation/sci-ai" target="_blank" rel="noopener noreferrer" class="method-chip" title="Green Software Foundation SCI for AI Working Group" data-i18n="method.hero.chipGsf">GSF SCI for AI ↗</a>
@@ -325,6 +325,7 @@
           <a href="#m-live" class="method-nav-link" data-i18n="method.nav.p7">§7 Live Calculation Trace</a>
           <a href="#m-calibration" class="method-nav-link" data-i18n="method.nav.p8">§8 Hardware &amp; Grids</a>
           <a href="#m-references" class="method-nav-link" data-i18n="method.nav.p9">§9 References &amp; Sources</a>
+          <a href="#m-scope" class="method-nav-link" data-i18n="method.nav.p10">§10 Scope &amp; Calibration</a>
         </div>
       </div>
 
@@ -766,7 +767,7 @@ Provider SCI = O_dev + M_dev</code>
           <div class="method-panel-title">
             <span data-i18n="method.part9.title">Part 9 · Standards, Primary References &amp; Literature</span>
           </div>
-          <span class="method-tag leaf" data-i18n="method.part9.tag">Authoritative Sources</span>
+          <span class="method-tag leaf" data-i18n="method.part9.tag">Primary Specifications &amp; Sources</span>
         </div>
         <p class="sub" style="margin-bottom:16px;" data-i18n="method.part9.sub">This project's accounting boundaries, continuous drift formulations, and carbon intensity equations are derived from international standards, open scientific benchmarks, and peer-reviewed literature:</p>
 
@@ -836,6 +837,67 @@ Provider SCI = O_dev + M_dev</code>
           </div>
         </div>
       </section>
+
+      <!-- Part 10: System Boundaries, Exclusions & Calibration Guidance -->
+      <section class="method-panel" id="m-scope">
+        <div class="method-panel-head">
+          <div class="method-panel-title">
+            <span data-i18n="method.part10.title">Part 10 · System Boundaries, Exclusions &amp; Calibration Guidance</span>
+          </div>
+          <span class="method-tag amber" data-i18n="method.part10.tag">Simulation Boundaries</span>
+        </div>
+        <p class="sub" style="margin-bottom:14px;" data-i18n="method.part10.sub">
+          To interpret simulator results accurately and translate them into real-world engineering environments, review the explicit modeling boundaries, simplifications, and calibration steps below:
+        </p>
+
+        <div class="method-grid-3">
+          <div class="method-card">
+            <div class="method-card-title">
+              <span data-i18n="method.part10.scopeTitle">Included Scope</span>
+              <span class="method-tag leaf" data-i18n="method.part10.scopeTag">Modeled</span>
+            </div>
+            <ul style="font-size:12.5px;color:var(--muted);line-height:1.6;padding-left:18px;margin-top:8px;" data-i18n-html="method.part10.scopeList">
+              <li>Candidate model comparison across initial training and test evaluation.</li>
+              <li>Operational streaming inference traffic over months of deployment.</li>
+              <li>Continuous performance degradation driven by input data distribution drift.</li>
+              <li>Drift-triggered or scheduled retraining compute, energy, and carbon.</li>
+              <li>Operational electricity carbon (PUE scaled, regional grid intensity).</li>
+              <li>Embodied server manufacturing carbon amortized by runtime and utilization.</li>
+              <li>Consumer SCI (QA) functional unit penalizing inaccurate predictions.</li>
+            </ul>
+          </div>
+
+          <div class="method-card">
+            <div class="method-card-title">
+              <span data-i18n="method.part10.exclTitle">Explicit Exclusions</span>
+              <span class="method-tag ember" data-i18n="method.part10.exclTag">Excluded</span>
+            </div>
+            <ul style="font-size:12.5px;color:var(--muted);line-height:1.6;padding-left:18px;margin-top:8px;" data-i18n-html="method.part10.exclList">
+              <li><b>Network transmission:</b> API gateway, ingress/egress bandwidth, and WAN hops.</li>
+              <li><b>Storage infrastructure:</b> Historical feature stores, datasets, and artifact registries.</li>
+              <li><b>GPU dynamic curves:</b> Assumes average active wattage profiles rather than dynamic DVFS/GPU thermals.</li>
+              <li><b>Client / edge devices:</b> Scopes server-side datacenter compute only.</li>
+              <li><b>Stochastic drift detection:</b> Models drift deterministically, abstracting away detector latency and false-alarm retrains.</li>
+            </ul>
+          </div>
+
+          <div class="method-card">
+            <div class="method-card-title">
+              <span data-i18n="method.part10.calibTitle">Telemetry Calibration</span>
+              <span class="method-tag blue" data-i18n="method.part10.calibTag">For Production</span>
+            </div>
+            <p style="font-size:12px;color:var(--muted);line-height:1.55;margin-top:8px;" data-i18n-html="method.part10.calibDesc">
+              Default values for model runtime, wattage, drift robustness, and grid intensity are <b>editable educational assumptions</b>. Before using these trade-offs to guide real-world deployment decisions:
+            </p>
+            <ul style="font-size:12px;color:var(--muted);line-height:1.55;padding-left:16px;margin-top:6px;" data-i18n-html="method.part10.calibList">
+              <li>Profile inference latency and training runtime on target production hardware.</li>
+              <li>Measure real host server wattage under load (e.g. IPMI/RAPL or PDU power meters).</li>
+              <li>Log observed accuracy decay on historical validation drift splits.</li>
+              <li>Input location-specific marginal grid carbon intensity from local operators or Ember.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </main>
@@ -858,6 +920,7 @@ Provider SCI = O_dev + M_dev</code>
 <script src="locales/en.js"></script>
 <script src="locales/fr.js"></script>
 <script src="i18n.js"></script>
+<script src="simulation-core.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

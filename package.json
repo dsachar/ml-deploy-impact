@@ -1,0 +1,21 @@
+{
+  "name": "ml-deploy-impact",
+  "version": "1.0.0",
+  "description": "Educational ML lifecycle carbon and energy simulator with SCI-for-AI-informed framing",
+  "main": "simulation-core.js",
+  "scripts": {
+    "test": "node --test tests/simulation-core.test.js"
+  },
+  "keywords": [
+    "green-software",
+    "green-ai",
+    "sci",
+    "sci-for-ai",
+    "machine-learning",
+    "mlops",
+    "carbon-intensity",
+    "iso-iec-21031"
+  ],
+  "author": "Dimitris Sacharidis, Antonios Kontaxakis",
+  "license": "MIT"
+}

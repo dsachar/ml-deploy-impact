@@ -4,9 +4,9 @@ window.LOCALES.fr = {
   header: {
     eyebrow: "ML Deploy Impact · Sélection de modèles AutoML · Analyse du cycle de vie (ACV)",
     title: "ML Deploy Impact : Analyse du cycle de vie des modèles d’apprentissage automatique",
-    lede: "Dans le paradigme de la <strong>Green AI</strong>, les architectures d'apprentissage automatique doivent être évaluées sur leur efficacité écologique et leur empreinte carbone réelle, plutôt que sur la seule exactitude sur des benchmarks statiques. Alors que l'AutoML déploie conventionnellement le candidat le plus performant sur des jeux de test hors-ligne (suivant des heuristiques de <em>Red AI</em>), en production réelle <strong>chaque modèle réagit différemment à la dérive des données</strong> : les architectures fragiles se dégradent vite et nécessitent de fréquents réentraînements très énergivores, tandis que les modèles robustes restent stables. Cet outil interactif démontre une <strong>analyse du cycle de vie des modèles d’apprentissage automatique</strong> sur plusieurs mois de service, en s'appuyant sur la norme <a href=\"https://grnsft.org/sci\" target=\"_blank\" rel=\"noopener noreferrer\">Software Carbon Intensity for AI (SCI for AI)</a> de la <a href=\"https://greensoftware.foundation/\" target=\"_blank\" rel=\"noopener noreferrer\">Green Software Foundation (GSF)</a> et la norme <a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> pour quantifier les émissions opérationnelles et incorporées — tout en appliquant le <strong>SCI Consommateur ajusté à la qualité (AQ)</strong> pour pénaliser directement les prédictions erronées.",
+    lede: "Dans le paradigme de la <strong>Green AI</strong>, les architectures d'apprentissage automatique doivent être évaluées sur leur efficacité écologique et leur empreinte carbone réelle, plutôt que sur la seule exactitude sur des benchmarks statiques. Alors que l'AutoML déploie conventionnellement le candidat le plus performant sur des jeux de test hors-ligne (suivant des heuristiques de <em>Red AI</em>), en production réelle <strong>chaque modèle réagit différemment à la dérive des données</strong> : les architectures fragiles se dégradent vite et nécessitent de fréquents réentraînements très énergivores, tandis que les modèles robustes restent stables. Ce simulateur éducatif interactif illustre une <strong>analyse du cycle de vie des modèles d’apprentissage automatique</strong> sur plusieurs mois de service opérationnel, appliquant un <strong>cadre inspiré de la spécification SCI for AI</strong> et des principes de l'<a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> pour comparer les émissions opérationnelles et incorporées — tout en appliquant le <strong>SCI Consommateur (AQ)</strong> pour pénaliser directement les erreurs sous dérive.",
     noticeTitle: "Avertissement",
-    noticeText: "Cet outil indépendant est conçu à des fins éducatives et informatives pour illustrer l'analyse de cycle de vie (ACV) des modèles ML. Les métriques simulées de calcul, d'énergie et de carbone sont indicatives et personnalisables. Ce projet n'est ni affilié à, ni approuvé, ni soutenu par les organisations mentionnées (notamment la GSF, Boavizta ou l'AIE)."
+    noticeText: "Ce simulateur éducatif produit des estimations illustratives et configurables — et non des mesures issues de télémétrie, des résultats de conformité ou des recommandations d'achat. Calibrez les paramètres avec vos propres données opérationnelles. Ce projet n'est pas affilié à, approuvé par, ou soutenu par les organisations mentionnées (telles que la GSF, Boavizta ou l'AIE)."
   },
   nav: {
     models: "Modèles",
@@ -214,7 +214,7 @@ window.LOCALES.fr = {
     hero: {
       eyebrow: "Référence technique & Spécifications",
       title: "Méthodologie & Cadre mathématique",
-      sub: "Équations analytiques exactes, conformité aux normes internationales (ISO/IEC 21031:2024) et modélisation de l'Intensité carbone logicielle ajustée à la qualité (SCI for AI) pour la sélection de modèles d'apprentissage automatique sous dérive continue de distribution.",
+      sub: "Équations analytiques exactes, cadre inspiré de SCI for AI (principes de l'ISO/IEC 21031:2024) et modélisation de l'Intensité carbone logicielle ajustée à la qualité (SCI Consommateur AQ) pour la simulation éducative de sélection de modèles sous dérive de distribution.",
       chipIso: "ISO/IEC 21031:2024 ↗",
       chipGsf: "GSF SCI for AI ↗",
       chipGreenAi: "Paradigme Green AI ↗",
@@ -231,7 +231,8 @@ window.LOCALES.fr = {
       p6: "§6 Adaptation aux erreurs",
       p7: "§7 Trace de calcul en direct",
       p8: "§8 Matériel & Réseaux",
-      p9: "§9 Références & Sources"
+      p9: "§9 Références & Sources",
+      p10: "§10 Périmètre & Calibrage"
     },
     part1: {
       title: "Partie 1 · L'angle mort de la sélection de modèles AutoML",
@@ -379,7 +380,7 @@ window.LOCALES.fr = {
     },
     part9: {
       title: "Partie 9 · Normes, références principales & littérature",
-      tag: "Sources de référence",
+      tag: "Spécifications de référence & Sources",
       sub: "Les périmètres comptables, les formulations de dérive continue et les équations d'intensité carbone de ce projet sont issus de normes internationales, de références scientifiques ouvertes et de la littérature évaluée par des pairs :",
       isoTitle: "Norme ISO/IEC 21031:2024",
       isoBtn: "Spéc. ISO ↗",
@@ -405,6 +406,21 @@ window.LOCALES.fr = {
       pattersonTitle: "Émissions de carbone & cadre des 4M",
       pattersonBtn: "arXiv ↗",
       pattersonDesc: "<b>Patterson et al. (2021) · Carbon Emissions and Large Neural Network Training.</b> Formalise le cadre des 4M (Modèle, Machine, Mécanisation PUE, et Carte d'intensité carbone du réseau), validant notre combinaison holistique de la puissance de calcul hôte, du PUE du centre de données et des émissions régionales."
+    },
+    part10: {
+      title: "Partie 10 · Périmètre du système, exclusions & guide de calibrage",
+      tag: "Limites de simulation",
+      sub: "Pour interpréter précisément les résultats du simulateur et les transposer dans des environnements d'ingénierie réels, consultez ci-dessous les limites explicites de modélisation, les simplifications et la démarche de calibrage :",
+      scopeTitle: "Périmètre inclus",
+      scopeTag: "Modélisé",
+      scopeList: "<li>Comparaison de modèles candidats sur l'entraînement initial et l'évaluation test.</li><li>Trafic d'inférence en continu sur plusieurs mois de déploiement.</li><li>Dégradation continue des performances induite par la dérive de distribution des données.</li><li>Calcul, énergie et carbone des réentraînements programmés ou déclenchés par seuil.</li><li>Carbone électrique opérationnel (ajusté au PUE et à l'intensité carbone du réseau).</li><li>Carbone incorporé de fabrication des serveurs amorti selon le temps de calcul et l'utilisation.</li><li>Unité fonctionnelle SCI Consommateur (AQ) pénalisant les erreurs opérationnelles.</li>",
+      exclTitle: "Exclusions explicites",
+      exclTag: "Exclu",
+      exclList: "<li><b>Transmission réseau :</b> Passerelles d'API, bande passante entrante/sortante et sauts WAN.</li><li><b>Infrastructure de stockage :</b> Feature stores historiques, jeux de données et registres de modèles.</li><li><b>Courbes dynamiques GPU :</b> Profils de puissance moyenne active CPU plutôt que modulation dynamique DVFS ou gestion thermique GPU.</li><li><b>Terminaux utilisateurs :</b> Périmètre limité aux serveurs du centre de données.</li><li><b>Détection stochastique de dérive :</b> Modèle déterministe de dérive, faisant abstraction de la latence du détecteur et des faux réentraînements.</li>",
+      calibTitle: "Calibrage par télémétrie",
+      calibTag: "Pour la production",
+      calibDesc: "Les valeurs par défaut (temps de calcul, puissance, robustesse à la dérive, intensité du réseau) sont des <b>hypothèses éducatives modifiables</b>. Avant d'utiliser ces arbitrages pour de vraies décisions de déploiement :",
+      calibList: "<li>Profilez la latence d'inférence et le temps d'entraînement sur le matériel cible.</li><li>Mesurez la puissance active réelle des serveurs (via IPMI/RAPL ou wattmètres PDU).</li><li>Consignez la dégradation d'exactitude observée sur des jeux de dérive historiques.</li><li>Renseignez l'intensité carbone marginale locale issue des opérateurs ou d'Ember.</li>"
     }
   },
   footer: {
