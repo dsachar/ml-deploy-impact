@@ -1,6 +1,6 @@
-// Zero-build client-side i18n engine for Green AI
+// Zero-build client-side i18n engine for ML Deploy Impact
 (function() {
-  const STORAGE_KEY = "greenai_lang";
+  const STORAGE_KEY = "ml_deploy_impact_lang";
   let currentLang = "en";
 
   // Determine initial language

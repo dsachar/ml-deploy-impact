@@ -1,10 +1,10 @@
-# Green AI: Lifecycle Assessment of ML Models — System Documentation
+# ML Deploy Impact: Lifecycle Assessment for Machine Learning Models — System Documentation
 
 > ⚠️ **Disclaimer**: This independent documentation and tool are created strictly for educational and informational purposes to illustrate ML Lifecycle Assessment (LCA). Simulated compute, energy, and carbon metrics are indicative and customizable. This project is not affiliated with, endorsed by, certified by, or supported by any of the organizations referenced herein (including the Green Software Foundation, Boavizta, or the International Energy Agency).
 
 ## 1. Overview & Purpose
 
-The **Green AI: Lifecycle Assessment of ML Models** is an interactive, zero-build web application designed to advance the core principles of **Green AI** in production machine learning and Automated Machine Learning (**AutoML**). As formulated by Schwartz et al. (2020), **Green AI** advocates that environmental footprint, energy consumption, and compute efficiency must be evaluated as primary criteria alongside predictive accuracy—countering the unsustainable "Red AI" trend of purchasing minor accuracy gains with exponential compute.
+**ML Deploy Impact** is an interactive, zero-build web application designed to advance the core principles of **Green AI** in production machine learning and Automated Machine Learning (**AutoML**). As formulated by Schwartz et al. (2020), **Green AI** advocates that environmental footprint, energy consumption, and compute efficiency must be evaluated as primary criteria alongside predictive accuracy—countering the unsustainable *Red AI* trend of purchasing minor accuracy gains with exponential compute.
 
 This system demonstrates the critical importance of evaluating the *entire lifecycle carbon footprint* of ML models when selecting candidate architectures for production deployment in platforms such as AutoML and MLOps model registries.
 

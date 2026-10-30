@@ -1,4 +1,4 @@
-# Green AI: Lifecycle Assessment of ML Models
+# ML Deploy Impact: Lifecycle Assessment for Machine Learning Models
 
 An interactive, zero-build web application designed to evaluate the entire lifecycle carbon footprint and energy consumption of machine learning models for production deployment and AutoML architectures.
 
@@ -10,7 +10,7 @@ Modeled on **Green AI** principles (Schwartz et al., 2020) and referencing open 
 
 ## 🌟 Overview
 
-Traditional AutoML and model selection heuristics rank candidate models based solely on offline validation accuracy over static benchmarks ("Red AI"). Once deployed in production:
+Traditional AutoML and model-selection heuristics rank candidate models based solely on offline validation accuracy over static benchmarks—an approach associated with *Red AI*. Once deployed in production:
 - Real-world data drift degrades brittle architectures, requiring costly retraining cycles.
 - Each retraining event repeatedly incurs the model's full training compute, energy, and carbon footprint.
 - Inference traffic scales continuously over millions of operational predictions.
@@ -26,8 +26,8 @@ The project is a zero-build static web application (HTML5, CSS3, ES6+ JavaScript
 To run locally:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/dsachar/GreenAI.git
-   cd GreenAI
+   git clone https://github.com/dsachar/ml-deploy-impact.git
+   cd ml-deploy-impact
    ```
 2. Serve the directory using any static file server (or open `index.html` directly in a browser):
    ```bash

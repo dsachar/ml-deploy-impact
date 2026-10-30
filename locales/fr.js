@@ -1,11 +1,10 @@
-// French translations for Green AI
+// French translations for ML Deploy Impact
 window.LOCALES = window.LOCALES || {};
 window.LOCALES.fr = {
   header: {
-    eyebrow: "Green AI · Sélection de modèles AutoML · Analyse du cycle de vie (ACV)",
-    title: "Green AI : Analyse du cycle de vie des modèles ML sous dérive",
-    amp: "sous",
-    lede: "Dans le paradigme de la <strong>Green AI</strong>, les architectures d'apprentissage automatique doivent être évaluées sur leur efficacité écologique et leur empreinte carbone réelle, plutôt que sur la seule exactitude sur des benchmarks statiques. Alors que l'AutoML déploie conventionnellement le candidat le plus performant sur des jeux de test hors-ligne (illustrant l'approche « Red AI »), en production réelle <strong>chaque modèle réagit différemment à la dérive des données</strong> : les architectures fragiles se dégradent vite et nécessitent de fréquents réentraînements très énergivores, tandis que les modèles robustes restent stables. Cet outil interactif démontre l'<strong>Analyse du cycle de vie (ACV) en Green AI</strong> sur plusieurs mois de service, en s'appuyant sur la norme <a href=\"https://grnsft.org/sci\" target=\"_blank\" rel=\"noopener noreferrer\">Software Carbon Intensity for AI (SCI for AI)</a> de la <a href=\"https://greensoftware.foundation/\" target=\"_blank\" rel=\"noopener noreferrer\">Green Software Foundation (GSF)</a> et la norme <a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> pour quantifier les émissions opérationnelles et incorporées — tout en appliquant le <strong>SCI Consommateur ajusté à la qualité (AQ)</strong> pour pénaliser directement les prédictions erronées.",
+    eyebrow: "ML Deploy Impact · Sélection de modèles AutoML · Analyse du cycle de vie (ACV)",
+    title: "ML Deploy Impact : Analyse du cycle de vie des modèles d’apprentissage automatique",
+    lede: "Dans le paradigme de la <strong>Green AI</strong>, les architectures d'apprentissage automatique doivent être évaluées sur leur efficacité écologique et leur empreinte carbone réelle, plutôt que sur la seule exactitude sur des benchmarks statiques. Alors que l'AutoML déploie conventionnellement le candidat le plus performant sur des jeux de test hors-ligne (suivant des heuristiques de <em>Red AI</em>), en production réelle <strong>chaque modèle réagit différemment à la dérive des données</strong> : les architectures fragiles se dégradent vite et nécessitent de fréquents réentraînements très énergivores, tandis que les modèles robustes restent stables. Cet outil interactif démontre une <strong>analyse du cycle de vie des modèles d’apprentissage automatique</strong> sur plusieurs mois de service, en s'appuyant sur la norme <a href=\"https://grnsft.org/sci\" target=\"_blank\" rel=\"noopener noreferrer\">Software Carbon Intensity for AI (SCI for AI)</a> de la <a href=\"https://greensoftware.foundation/\" target=\"_blank\" rel=\"noopener noreferrer\">Green Software Foundation (GSF)</a> et la norme <a href=\"https://www.iso.org/standard/86612.html\" target=\"_blank\" rel=\"noopener noreferrer\">ISO/IEC 21031:2024</a> pour quantifier les émissions opérationnelles et incorporées — tout en appliquant le <strong>SCI Consommateur ajusté à la qualité (AQ)</strong> pour pénaliser directement les prédictions erronées.",
     noticeTitle: "Avertissement",
     noticeText: "Cet outil indépendant est conçu à des fins éducatives et informatives pour illustrer l'analyse de cycle de vie (ACV) des modèles ML. Les métriques simulées de calcul, d'énergie et de carbone sont indicatives et personnalisables. Ce projet n'est ni affilié à, ni approuvé, ni soutenu par les organisations mentionnées (notamment la GSF, Boavizta ou l'AIE)."
   },
@@ -409,7 +408,7 @@ window.LOCALES.fr = {
     }
   },
   footer: {
-    title: "Green AI · Analyse du cycle de vie des modèles ML sous dérive",
+    title: "ML Deploy Impact : Analyse du cycle de vie des modèles d’apprentissage automatique",
     about: "Créé par <a href=\"https://dsachar.net\" target=\"_blank\" rel=\"noopener noreferrer\">Dimitris Sacharidis</a> et Antonios Kontaxakis avec l'assistance d'outils de codage GenAI."
   }
 };

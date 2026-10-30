@@ -1,4 +1,4 @@
-// Lifecycle Assessment of ML Models under Drift: continuous per-data-point drift + energy model.
+// ML Deploy Impact: lifecycle assessment under drift with continuous per-data-point drift + energy model.
 // Layout: 4 workflow tabs (01 Models, 02 Configuration, 03 Assessment, 04 Which Model to Deploy) + Methodology reference.
 // Fully optimized for O(1) memory, bounded SVG rendering, and rAF debouncing.
 
