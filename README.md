@@ -7,7 +7,7 @@
 
 An interactive, zero-build educational simulator designed to evaluate the multi-month lifecycle energy and carbon footprint of candidate machine learning models under continuous distribution drift and retraining.
 
-> 🚀 **Live Simulator**: [https://dsachar.net/GreenAI](https://dsachar.net/GreenAI)
+> 🚀 **Live Simulator**: [https://dsachar.net/ml-deploy-impact](https://dsachar.net/ml-deploy-impact)
 
 ---
 
